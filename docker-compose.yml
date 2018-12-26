@@ -6,7 +6,6 @@ services:
       context: .
     container_name: wordpress-sqlite
     volumes:
-      - .:/test
       - ./database:/wordpress/wp-content/database
       - ./uploads:/wordpress/wp-content/uploads
       - ./plugins/starter:/wordpress/wp-content/plugins/starter
