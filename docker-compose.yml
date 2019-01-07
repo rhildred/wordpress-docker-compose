@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 
 services:
   dev:
@@ -8,8 +8,8 @@ services:
     volumes:
       - ./database:/wordpress/wp-content/database
       - ./uploads:/wordpress/wp-content/uploads
-      - ./plugins/starter:/wordpress/wp-content/plugins/starter
-      - ./themes/starter:/wordpress/wp-content/themes/starter
+      - ./plugins:/wordpress/wp-content/plugins
+      - ./themes:/wordpress/wp-content/themes
     restart: always
     entrypoint: sh -c "cd wordpress && php -S 0.0.0.0:8000"
     ports:
