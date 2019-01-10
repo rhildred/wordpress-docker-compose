@@ -13,4 +13,4 @@ services:
     restart: always
     entrypoint: sh -c "cd wordpress && php -S 0.0.0.0:8000"
     ports:
-      - "8000:8000"
+      - "${RHPORT}:8000"
