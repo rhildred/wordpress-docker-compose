@@ -4,7 +4,6 @@ services:
   dev:
     build:
       context: .
-    container_name: wordpress-sqlite
     volumes:
       - ./database:/wordpress/wp-content/database
       - ./uploads:/wordpress/wp-content/uploads
