@@ -9,6 +9,7 @@ services:
       - ./uploads:/wordpress/wp-content/uploads
       - ./plugins:/wordpress/wp-content/plugins
       - ./themes:/wordpress/wp-content/themes
+      - ./wp-config.php:/wordpress/wp-config.php
     restart: always
     entrypoint: sh -c "cd wordpress && php -S 0.0.0.0:8000"
     ports:
