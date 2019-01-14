@@ -79,7 +79,7 @@ $table_prefix  = 'wp_';
  */
 define('WP_DEBUG', false);
 
-if ($_SERVER['X_FORWARDED_PROTO'] == "https") $_SERVER['HTTPS']="on";
+if ($_SERVER['HTTP_X_FORWARDED_PROTO'] == "https") $_SERVER['HTTPS']="on";
 
 /* That's all, stop editing! Happy blogging. */
 
