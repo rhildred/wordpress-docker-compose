@@ -1,2 +1,3 @@
 database/.ht*
 .env
+uploads/*/*

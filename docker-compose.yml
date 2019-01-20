@@ -5,14 +5,13 @@ services:
     build:
       context: .
     volumes:
-      - ./database:/wordpress/wp-content/database
-      - ./uploads:/wordpress/wp-content/uploads
-      - ./plugins:/wordpress/wp-content/plugins
-      - ./themes:/wordpress/wp-content/themes
-      - ./wp-config.php:/wordpress/wp-config.php
-      - ./php.ini:/usr/local/etc/php/php.ini
+      - ./database:/usr/src/wordpress/wp-content/database
+      - ./uploads:/usr/src/wordpress/wp-content/uploads
+      - ./plugins:/usr/src/wordpress/wp-content/plugins
+      - ./themes:/usr/src/wordpress/wp-content/themes
+      - ./wp-config.php:/usr/src/wordpress/wp-config.php
     restart: always
-    entrypoint: sh -c "cd wordpress && php -S 0.0.0.0:8000"
+    entrypoint: sh -c "cd /usr/src/wordpress && php -S 0.0.0.0:8000"
     ports:
       - "${RHPORT}:8000"
     user: ${CURRENT_UID}
