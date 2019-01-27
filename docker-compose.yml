@@ -11,7 +11,8 @@ services:
       - ./themes:/usr/src/wordpress/wp-content/themes
       - ./wp-config.php:/usr/src/wordpress/wp-config.php
     restart: always
-    entrypoint: sh -c "cd /usr/src/wordpress && php -S 0.0.0.0:8000"
+    entrypoint: sh -c "cd /usr/src/wordpress && php -S 0.0.0.0:${RHPORT}"
     ports:
-      - "${RHPORT}:8000"
+      - "${RHPORT}:${RHPORT}"
     user: ${CURRENT_UID}
+    network_mode: "host"
