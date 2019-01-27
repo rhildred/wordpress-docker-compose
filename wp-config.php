@@ -80,6 +80,7 @@ $table_prefix  = 'wp_';
 define('WP_DEBUG', false);
 
 if ($_SERVER['HTTP_X_FORWARDED_PROTO'] == "https") $_SERVER['HTTPS']="on";
+define('FS_METHOD','direct');
 
 /* That's all, stop editing! Happy blogging. */
 
