@@ -8,6 +8,7 @@ services:
       - ./database:/usr/src/wordpress/wp-content/database
       - ./uploads:/usr/src/wordpress/wp-content/uploads
       - ./plugins:/usr/src/wordpress/wp-content/plugins
+      - ./upgrade:/usr/src/wordpress/wp-content/upgrade
       - ./themes:/usr/src/wordpress/wp-content/themes
       - ./wp-config.php:/usr/src/wordpress/wp-config.php
     restart: always
